@@ -1,0 +1,19 @@
+Options -Indexes
+
+# content-type mappings
+AddType application/javascript .js
+AddType text/cache-manifest .manifest
+
+
+# cache stuff for 60 minutes
+ExpiresActive On
+ExpiresDefault "access plus 120 minutes"
+
+# don't cache manifest at all so that it's easy to reload the appcache
+<FilesMatch "\.manifest$">
+	ExpiresDefault "access"
+</FilesMatch>
+
+# compression
+SetOutputFilter DEFLATE
+Header set Vary "Accept-Encoding"
