@@ -1,0 +1,6 @@
+# robotstxt.org/
+
+Sitemap: http://manuel-hervo.github.io/sitemap.xml
+
+User-agent: *
+Allow: /
